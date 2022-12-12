@@ -2,8 +2,8 @@ html {
 	box-sizing: border-box;
 }
 
-*, 
-*::before, 
+*,
+*::before,
 *::after {
 	box-sizing: inherit;
 }
@@ -16,11 +16,6 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-
-li {
-    list-style-type: none; /* Убираем маркеры */
-}
-
 
 @font-face {
 	font-family: 'Noto Sans';
@@ -51,7 +46,8 @@ a {
 
 body {
 	margin: 0;
-	padding: 100px; /* для удобства */
+	padding: 100px;
+	/* для удобства */
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 400;
 }
@@ -68,11 +64,12 @@ body {
 
 .product__image {
 	position: relative;
+	overflow: hidden;
 	display: block;
 	height: 162px;
 }
 
-.image-switch{
+.image-switch {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -130,14 +127,26 @@ body {
 	justify-content: center;
 }
 
-.product__title {
+.image-pagination__item {
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	margin: 0 3px;
+	background-color: #c4c4c4;
+}
+
+.image-pagination__item--active {
+	background-color: var(--color-accent);
+}
+
+.product-title {
 	margin-bottom: 8px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 20px;
 	color: var(--color-dark);
 }
-
 
 .product__props {
 	display: flex;
@@ -151,15 +160,6 @@ body {
 	align-items: center;
 	color: var(--color-accent);
 	font-weight: 600;
-}
-
-.image-pagination__item {
-	display: block;
-	width: 4px;
-	height: 4px;
-	border-radius: 100%;
-	margin: 0 3px;
-	background-color: #c4c4c4;
 }
 
 .product__rating svg {
@@ -177,7 +177,7 @@ body {
 	color: var(--color-light);
 }
 
-.product__term  {
+.product__term {
 	display: block;
 	margin-bottom: 7px;
 }
@@ -193,6 +193,7 @@ body {
 }
 
 .product-price__current {
+	margin-right: 12px;
 	font-size: 24px;
 	color: var(--color-dark);
 }
