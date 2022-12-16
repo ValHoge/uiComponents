@@ -82,7 +82,6 @@ productsBtn.forEach(el => {
 		cartProductsList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceString, id));
 		printQuantity();
 
-		
 		self.disabled = true;
 	});
 });
